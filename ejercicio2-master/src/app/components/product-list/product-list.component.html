@@ -1,0 +1,24 @@
+<h3>Listado de productos</h3>
+<div
+    class="list-card"
+    *ngFor="let producto of productos">
+    <div class="card"
+        (click)="selectProducto(producto)"
+        [ngClass] = "{onSale: producto.onSale}"
+        >
+        <div class = "card-body">
+            <h2 class="card-title">{{producto.name}}</h2>  
+            <p class="card-text">Precio: {{producto.price}}</p>
+            <span *ngIf="!producto.inStock" class="out-of-stock">(Sin stock)</span>
+        </div>    
+    </div>
+</div>
+
+<app-product-details
+        *ngIf="selectedProduct"
+        [product]="selectedProduct"
+    >
+</app-product-details>
+
+
+  

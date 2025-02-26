@@ -1,0 +1,16 @@
+<div class="contenedor-detalles">
+  <img [src] = "product.imagen" alt="">
+  <div class="product-details">
+    <h3>Detalles del producto</h3>
+    <p><strong>Nombre:</strong> {{ product.name }}</p>
+    <p><strong>Precio:</strong> ${{ product.price }}</p>
+    <p>
+      <strong>Disponibilidad:</strong>
+      <span *ngIf="product.inStock; else outOfStock">En stock</span>
+      <ng-template #outOfStock>No disponible</ng-template>
+    </p>
+    <p *ngIf="product.onSale"><strong>¡Producto en oferta!</strong></p>
+  </div>
+</div>
+
+  

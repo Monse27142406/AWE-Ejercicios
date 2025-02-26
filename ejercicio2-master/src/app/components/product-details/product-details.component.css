@@ -1,0 +1,17 @@
+.product-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .contenedor-detalles {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+  }
